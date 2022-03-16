@@ -5,13 +5,13 @@ public class Cluster
     public Cluster(int len, int x, int y)
     {
         // your code here
-         Tendril a = new Tendril(15, Math.random()*(2*Math.PI), 250, 250);
-         Tendril b = new Tendril(15, Math.random()*(2*Math.PI), 250, 250);
-         Tendril c = new Tendril(15, Math.random()*(2*Math.PI), 250, 250);
-         Tendril d = new Tendril(15, Math.random()*(2*Math.PI), 250, 250);
-         Tendril e = new Tendril(15, Math.random()*(2*Math.PI), 250, 250);
-         Tendril f = new Tendril(15, Math.random()*(2*Math.PI), 250, 250);
-         Tendril g = new Tendril(15, Math.random()*(2*Math.PI), 250, 250);
+         Tendril a = new Tendril(len, 2*Math.PI/7, x, y);
+         Tendril b = new Tendril(len, 2*2*Math.PI/7, x, y);
+         Tendril c = new Tendril(len, 3*2*Math.PI/7, x, y);
+         Tendril d = new Tendril(len, 4*2*Math.PI/7, x, y);
+         Tendril e = new Tendril(len, 5*2*Math.PI/7, x, y);
+         Tendril f = new Tendril(len, 6*2*Math.PI/7, x, y);
+         Tendril g = new Tendril(len, 7*2*Math.PI/7, x, y);
          a.show();
          b.show();
          c.show();
