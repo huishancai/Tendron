@@ -4,7 +4,7 @@ class Tendril
   private int myNumSegments, myX, myY;
   private double myAngle;
   
-  /**
+  /*
    Class constructor
    len is how many segments in this tendril (each a fixed length, 4 is a good start)
    theta is tendril starting angle in radians 
@@ -23,14 +23,18 @@ class Tendril
     //your code here
     int startX = myX;
     int startY = myY;
+    stroke(0,0,255);
     for(int i = 0; i < myNumSegments; i++) {
       myAngle += (Math.random()*.4)-.2;
       double endX = startX + (Math.cos(myAngle)* myNumSegments);
       double endY = startY + (Math.sin(myAngle)* myNumSegments);
       line((float)(startX), (float)(startY), (float)(endX), (float)(endY));
       startX = (int)(endX);
-      startY = (int)(endY);
-      
+      startY = (int)(endY); 
+      myNumSegments-=20;
+      if(myNumSegments >= SEG_LENGTH) {
+      Cluster c = new Cluster(myNumSegments, startX, startY);
+      }
     }
   }
 }
